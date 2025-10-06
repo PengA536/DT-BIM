@@ -125,21 +125,6 @@ These numbers vary by random seed but should be within these ballparks.
 
 ---
 
-## 7. Citation
-
-If you use this code, please cite the paper and this repo.
-
-```bibtex
-@software{dt_bim_reference_impl,
-  title        = {DT-BIM: Digital Twin-driven BIM Simulation (reference implementation)},
-  author       = {Ruixiaoguang (Ray) and OpenSource Contributors},
-  year         = {2025},
-  url          = {https://github.com/your-org/dt-bim}, 
-}
-```
-
----
-
 ## 8. License
 
 Released under the MIT License (see `LICENSE`).
