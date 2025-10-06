@@ -1,0 +1,41 @@
+random_seed: 0
+
+# synthetic world sizes (keep small for fast demo)
+n_tasks: 60              # number of tasks (subset of "191")
+n_resources: 12          # total resources
+state_dim: 64            # compact fused state dimension
+action_dim: 16           # compact action (assign + schedule embeddings)
+horizon: 120             # time steps for data + RL episodes
+
+# EKF / sensor noise
+dt: 1.0
+process_noise_q: 0.02
+measurement_noise_r: 0.05
+n_sensors: 4             # number of heterogeneous sources to fuse
+
+# RL (TD3) hyper-parameters
+td3:
+  actor_hidden: [256, 128]
+  critic_hidden: [256, 128]
+  actor_lr: 1.0e-4
+  critic_lr: 3.0e-4
+  tau: 0.005
+  gamma: 0.99
+  policy_delay: 2
+  noise_std: 0.1
+  noise_clip: 0.5
+  buffer_size: 200000
+  batch_size: 128
+  steps: 5000
+
+# reward weights
+reward_weights:
+  progress: 0.35
+  cost:     0.30
+  quality:  0.20
+  safety:   0.15
+
+# MIP sizes
+mip:
+  assign_tasks: 30
+  assign_resources: 8
